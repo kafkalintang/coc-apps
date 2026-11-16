@@ -4,9 +4,47 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Timer, CheckCircle2, XCircle } from 'lucide-react';
 
+// --- FUNGSI SUARA (WEB AUDIO API) ---
+const playSound = (type: 'click' | 'correct' | 'wrong') => {
+  try {
+    const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+    if (!AudioContext) return;
+    const ctx = new AudioContext();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+
+    if (type === 'click') {
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(600, ctx.currentTime);
+      gain.gain.setValueAtTime(0.1, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
+      osc.start(); osc.stop(ctx.currentTime + 0.1);
+    } else if (type === 'correct') {
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(800, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(1200, ctx.currentTime + 0.1);
+      gain.gain.setValueAtTime(0.2, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
+      osc.start(); osc.stop(ctx.currentTime + 0.3);
+    } else if (type === 'wrong') {
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(200, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(150, ctx.currentTime + 0.2);
+      gain.gain.setValueAtTime(0.1, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
+      osc.start(); osc.stop(ctx.currentTime + 0.3);
+    }
+  } catch (e) {
+    console.log("Audio belum diizinkan browser");
+  }
+};
+
 export default function LipsRecall() {
   const [phase, setPhase] = useState<'memorize' | 'recall' | 'result'>('memorize');
-  const [timeLeft, setTimeLeft] = useState(30 * 60); // 30 menit
+  const [timeLeft, setTimeLeft] = useState(30 * 60);
   const [score, setScore] = useState(0);
   
   const totalItems = 64;
@@ -14,7 +52,6 @@ export default function LipsRecall() {
   const [displayOrder, setDisplayOrder] = useState<number[]>([]);
   const [userAnswer, setUserAnswer] = useState<number[]>([]);
 
-  // Inisialisasi awal
   useEffect(() => {
     const items = Array.from({ length: totalItems }, (_, i) => i + 1);
     const randomized = [...items].sort(() => Math.random() - 0.5);
@@ -22,12 +59,11 @@ export default function LipsRecall() {
     setDisplayOrder(randomized);
   }, []);
 
-  // Timer
   useEffect(() => {
     if (phase === 'result' || timeLeft <= 0) return;
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
-        if (prev <= 1) { setPhase('result'); return 0; }
+        if (prev <= 1) { setPhase('result'); playSound('wrong'); return 0; }
         return prev - 1;
       });
     }, 1000);
@@ -41,6 +77,7 @@ export default function LipsRecall() {
   };
 
   const handleNextPhase = () => {
+    playSound('click');
     setPhase('recall');
     setDisplayOrder([...displayOrder].sort(() => Math.random() - 0.5));
     setUserAnswer([]);
@@ -48,6 +85,8 @@ export default function LipsRecall() {
 
   const handleSelectItem = (item: number) => {
     if (phase !== 'recall') return;
+    playSound('click'); // <--- SUARA KLIK
+    
     if (userAnswer.includes(item)) setUserAnswer(userAnswer.filter((i) => i !== item));
     else setUserAnswer([...userAnswer, item]);
   };
@@ -58,13 +97,19 @@ export default function LipsRecall() {
       if (userAnswer[i] === lipsOrder[i]) correctCount++;
     }
     setScore(correctCount);
+    
+    if (correctCount > totalItems / 2) {
+      playSound('correct');
+    } else {
+      playSound('wrong');
+    }
+    
     setPhase('result');
   };
 
   const renderImage = (itemNumber: number) => {
     const numPad = itemNumber.toString().padStart(2, '0');
     const fileName = `/lips/bibir_${numPad}.jpg`;
-    
     return <img src={fileName} alt={`Bibir ${itemNumber}`} style={{ height: '60px', width: '100%', objectFit: 'contain', marginBottom: '4px' }} onError={(e) => { e.currentTarget.src = 'https://via.placeholder.com/60?text=?'; }} />;
   };
 
