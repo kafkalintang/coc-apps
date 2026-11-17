@@ -1,7 +1,7 @@
 'use client';
 
 import { LeaderboardEntry } from '../../../types';
-import { Medal } from 'lucide-react';
+import { Medal, Trophy } from 'lucide-react';
 
 // DATA PERINGKAT KOSONG DULU
 const DUMMY_LEADERBOARD: LeaderboardEntry[] = [];
@@ -34,11 +34,13 @@ export default function Leaderboard() {
               </tr>
             ))}
             
-            {/* TAMBAHAN: Tampilan kalau datanya masih kosong */}
+            {/* TAMBAHAN: Tampilan kalau datanya masih kosong menggunakan Icon */}
             {data.length === 0 && (
               <tr>
                 <td colSpan={3} style={{ padding: '32px', textAlign: 'center', color: '#6b7280' }}>
-                  Belum ada pemain yang mencetak skor. Jadilah yang pertama! 🏆
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                    Belum ada pemain yang mencetak skor. Jadilah yang pertama! <Trophy size={18} color="#f59e0b" />
+                  </div>
                 </td>
               </tr>
             )}

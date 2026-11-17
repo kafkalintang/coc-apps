@@ -46,7 +46,7 @@ export default function DashboardPage() {
   return (
     <div>
       <h1 style={{ color: '#111827', marginBottom: 8, fontSize: '28px', fontWeight: 'bold' }}>
-        Dashboard COC
+        Dashboard Game Clash Of Champions
       </h1>
       <p style={{ color: '#6b7280', marginBottom: 32, fontSize: 16 }}>
         Pilih kategori kemampuan untuk melihat daftar game:
