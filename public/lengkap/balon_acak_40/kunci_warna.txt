@@ -1,0 +1,122 @@
+KUNCI URUTAN WARNA (tiap baris = 10 balon, kiri ke kanan)
+
+== Latihan #01 ==
+Baris 1: hijau, kuning, hijau, ungu, kuning, merah, biru, ungu, ungu, biru
+Baris 2: biru, merah, ungu, merah, kuning, biru, biru, merah, kuning, merah
+Baris 3: biru, merah, ungu, ungu, merah, biru, merah, ungu, hijau, hijau
+Baris 4: kuning, kuning, hijau, hijau, hijau, biru, kuning, hijau, kuning, ungu
+
+== Latihan #02 ==
+Baris 1: kuning, merah, kuning, kuning, hijau, hijau, ungu, ungu, merah, kuning
+Baris 2: kuning, biru, merah, biru, biru, kuning, biru, hijau, ungu, ungu
+Baris 3: ungu, hijau, biru, merah, merah, merah, biru, biru, kuning, merah
+Baris 4: kuning, merah, hijau, hijau, ungu, hijau, ungu, hijau, biru, ungu
+
+== Latihan #03 ==
+Baris 1: biru, biru, kuning, ungu, ungu, hijau, merah, merah, ungu, biru
+Baris 2: hijau, biru, biru, hijau, kuning, kuning, biru, merah, kuning, hijau
+Baris 3: ungu, kuning, biru, ungu, hijau, ungu, kuning, kuning, merah, biru
+Baris 4: hijau, merah, kuning, merah, merah, hijau, merah, ungu, hijau, ungu
+
+== Latihan #04 ==
+Baris 1: merah, biru, merah, ungu, ungu, kuning, biru, biru, merah, hijau
+Baris 2: hijau, biru, hijau, ungu, hijau, kuning, hijau, hijau, kuning, ungu
+Baris 3: kuning, merah, merah, hijau, hijau, ungu, merah, biru, kuning, merah
+Baris 4: ungu, merah, ungu, ungu, biru, kuning, biru, kuning, biru, kuning
+
+== Latihan #05 ==
+Baris 1: kuning, biru, hijau, biru, hijau, merah, kuning, merah, ungu, hijau
+Baris 2: kuning, hijau, kuning, ungu, ungu, kuning, ungu, merah, hijau, biru
+Baris 3: biru, ungu, biru, merah, kuning, biru, hijau, ungu, biru, merah
+Baris 4: ungu, kuning, hijau, hijau, merah, biru, kuning, merah, merah, ungu
+
+== Latihan #06 ==
+Baris 1: biru, hijau, ungu, kuning, kuning, merah, ungu, ungu, biru, ungu
+Baris 2: merah, kuning, kuning, merah, hijau, kuning, merah, merah, hijau, hijau
+Baris 3: ungu, merah, merah, biru, biru, merah, kuning, ungu, hijau, biru
+Baris 4: biru, kuning, biru, hijau, ungu, hijau, kuning, biru, ungu, hijau
+
+== Latihan #07 ==
+Baris 1: biru, biru, kuning, merah, merah, merah, merah, ungu, hijau, biru
+Baris 2: merah, ungu, hijau, biru, hijau, hijau, merah, biru, ungu, kuning
+Baris 3: ungu, kuning, merah, merah, kuning, biru, kuning, kuning, kuning, kuning
+Baris 4: hijau, hijau, hijau, biru, ungu, ungu, ungu, hijau, ungu, biru
+
+== Latihan #08 ==
+Baris 1: merah, merah, kuning, biru, biru, hijau, kuning, hijau, kuning, ungu
+Baris 2: ungu, kuning, hijau, merah, merah, biru, hijau, ungu, biru, merah
+Baris 3: merah, kuning, hijau, kuning, ungu, ungu, biru, hijau, biru, kuning
+Baris 4: merah, biru, hijau, biru, ungu, ungu, kuning, hijau, merah, ungu
+
+== Latihan #09 ==
+Baris 1: merah, biru, biru, kuning, kuning, kuning, kuning, ungu, merah, hijau
+Baris 2: ungu, ungu, biru, ungu, kuning, ungu, kuning, biru, merah, hijau
+Baris 3: merah, hijau, biru, biru, hijau, ungu, ungu, hijau, merah, biru
+Baris 4: hijau, hijau, merah, kuning, biru, kuning, merah, hijau, ungu, merah
+
+== Latihan #10 ==
+Baris 1: kuning, ungu, kuning, kuning, ungu, biru, merah, biru, ungu, hijau
+Baris 2: kuning, ungu, merah, kuning, merah, hijau, hijau, hijau, merah, biru
+Baris 3: kuning, merah, merah, biru, biru, biru, merah, biru, ungu, kuning
+Baris 4: hijau, ungu, kuning, biru, ungu, ungu, hijau, merah, hijau, hijau
+
+== Latihan #11 ==
+Baris 1: hijau, kuning, biru, ungu, biru, hijau, ungu, ungu, biru, ungu
+Baris 2: kuning, merah, kuning, hijau, ungu, biru, merah, biru, merah, kuning
+Baris 3: merah, biru, hijau, ungu, kuning, kuning, hijau, merah, merah, kuning
+Baris 4: kuning, ungu, hijau, merah, biru, hijau, ungu, biru, hijau, merah
+
+== Latihan #12 ==
+Baris 1: biru, biru, ungu, merah, hijau, biru, biru, merah, merah, merah
+Baris 2: kuning, merah, merah, biru, hijau, ungu, hijau, hijau, merah, biru
+Baris 3: merah, ungu, kuning, hijau, kuning, hijau, kuning, kuning, ungu, ungu
+Baris 4: kuning, kuning, kuning, hijau, hijau, biru, ungu, ungu, ungu, biru
+
+== Latihan #13 ==
+Baris 1: biru, ungu, hijau, kuning, merah, merah, kuning, kuning, biru, ungu
+Baris 2: hijau, hijau, merah, kuning, biru, ungu, ungu, merah, kuning, ungu
+Baris 3: ungu, merah, hijau, merah, biru, ungu, hijau, biru, hijau, ungu
+Baris 4: hijau, hijau, merah, biru, kuning, kuning, merah, biru, kuning, biru
+
+== Latihan #14 ==
+Baris 1: merah, merah, hijau, merah, kuning, ungu, kuning, kuning, merah, merah
+Baris 2: biru, ungu, hijau, ungu, ungu, biru, hijau, kuning, kuning, hijau
+Baris 3: ungu, biru, biru, biru, merah, kuning, hijau, hijau, merah, biru
+Baris 4: biru, hijau, ungu, hijau, kuning, ungu, biru, merah, ungu, kuning
+
+== Latihan #15 ==
+Baris 1: merah, hijau, merah, hijau, merah, kuning, ungu, biru, kuning, hijau
+Baris 2: biru, biru, ungu, hijau, merah, hijau, merah, kuning, merah, kuning
+Baris 3: kuning, ungu, hijau, merah, kuning, kuning, hijau, ungu, ungu, ungu
+Baris 4: biru, kuning, biru, hijau, ungu, biru, merah, biru, biru, ungu
+
+== Latihan #16 ==
+Baris 1: kuning, kuning, hijau, biru, merah, ungu, biru, ungu, merah, kuning
+Baris 2: ungu, merah, biru, merah, kuning, kuning, ungu, kuning, hijau, kuning
+Baris 3: hijau, merah, hijau, merah, hijau, biru, biru, biru, hijau, ungu
+Baris 4: ungu, biru, merah, kuning, biru, ungu, hijau, merah, ungu, hijau
+
+== Latihan #17 ==
+Baris 1: ungu, hijau, merah, merah, hijau, merah, ungu, kuning, ungu, merah
+Baris 2: biru, hijau, biru, merah, merah, ungu, biru, hijau, biru, hijau
+Baris 3: hijau, merah, biru, kuning, kuning, kuning, biru, biru, biru, ungu
+Baris 4: hijau, kuning, ungu, kuning, ungu, ungu, hijau, kuning, kuning, merah
+
+== Latihan #18 ==
+Baris 1: hijau, hijau, kuning, kuning, kuning, hijau, ungu, merah, ungu, hijau
+Baris 2: ungu, merah, biru, merah, merah, merah, ungu, merah, ungu, kuning
+Baris 3: biru, biru, merah, biru, biru, hijau, ungu, kuning, hijau, kuning
+Baris 4: ungu, hijau, hijau, merah, kuning, biru, ungu, kuning, biru, biru
+
+== Latihan #19 ==
+Baris 1: hijau, kuning, merah, ungu, merah, kuning, kuning, biru, biru, ungu
+Baris 2: merah, ungu, hijau, ungu, ungu, kuning, ungu, merah, merah, biru
+Baris 3: hijau, biru, merah, ungu, hijau, biru, kuning, kuning, hijau, biru
+Baris 4: merah, hijau, ungu, biru, kuning, merah, hijau, biru, kuning, hijau
+
+== Latihan #20 ==
+Baris 1: biru, hijau, ungu, kuning, biru, kuning, ungu, biru, kuning, merah
+Baris 2: merah, merah, ungu, merah, hijau, hijau, ungu, biru, kuning, kuning
+Baris 3: hijau, ungu, kuning, ungu, hijau, biru, ungu, hijau, hijau, biru
+Baris 4: merah, ungu, biru, merah, biru, kuning, hijau, merah, kuning, merah
+
