@@ -9,40 +9,45 @@ const CATEGORIES = [
     name: 'Arithmetic / Numerical', 
     desc: 'Uji kecepatan berhitung dan logika numerik.',
     icon: Calculator,
-    color: '#3b82f6', // Biru
-    gradient: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)' // Gradasi kotak ikon
+    color: '#2563eb', // Teks & Ikon Biru
+    cardGradient: 'linear-gradient(135deg, #ffffff 0%, #eff6ff 100%)', // Kartu gradasi soft
+    iconBg: '#dbeafe' // Ikon background
   },
   { 
     id: 'memory', 
     name: 'Memory', 
     desc: 'Uji daya ingat angka, simbol, dan posisi.',
     icon: Brain,
-    color: '#8b5cf6', // Ungu
-    gradient: 'linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%)'
+    color: '#7c3aed', // Ungu
+    cardGradient: 'linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%)',
+    iconBg: '#ede9fe'
   },
   { 
     id: 'spatial', 
     name: 'Spatial Reasoning', 
     desc: 'Bayangkan objek 2D menjadi 3D dan rotasi.',
     icon: Box,
-    color: '#10b981', // Hijau
-    gradient: 'linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%)'
+    color: '#059669', // Hijau
+    cardGradient: 'linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%)',
+    iconBg: '#d1fae5'
   },
   { 
     id: 'logical', 
     name: 'Logical Reasoning', 
     desc: 'Temukan pola dan pecahkan teka-teki.',
     icon: Lightbulb,
-    color: '#f59e0b', // Kuning
-    gradient: 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)'
+    color: '#d97706', // Kuning/Oranye
+    cardGradient: 'linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)',
+    iconBg: '#fef3c7'
   },
   { 
     id: 'problem-solving', 
     name: 'Problem Solving', 
     desc: 'Susun strategi dengan batasan tertentu.',
     icon: Puzzle,
-    color: '#ef4444', // Merah
-    gradient: 'linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%)'
+    color: '#dc2626', // Merah
+    cardGradient: 'linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)',
+    iconBg: '#fee2e2'
   },
 ];
 
@@ -70,7 +75,6 @@ const styles = {
     gap: '20px',
   },
   card: {
-    background: '#ffffff',
     borderRadius: '16px',
     padding: '24px',
     boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)',
@@ -127,23 +131,27 @@ export default function DashboardPage() {
               style={{ textDecoration: 'none' }}
             >
               <div 
-                style={styles.card}
+                style={{
+                  ...styles.card,
+                  background: category.cardGradient, // <--- KARTU YANG BERWARNA
+                }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-4px)';
                   e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+                  e.currentTarget.style.borderColor = category.color + '40'; // Border ikut warna
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = styles.card.boxShadow;
+                  e.currentTarget.style.borderColor = '#f3f4f6';
                 }}
               >
-                {/* HANYA KOTAK IKON INI YANG DIKASIH GRADASI WARNA */}
-                <div style={{ ...styles.iconWrapper, background: category.gradient }}>
+                <div style={{ ...styles.iconWrapper, background: category.iconBg }}>
                   <Icon size={32} color={category.color} />
                 </div>
 
                 <div>
-                  <h3 style={styles.cardTitle}>
+                  <h3 style={{ ...styles.cardTitle, color: category.color }}>
                     {category.name}
                   </h3>
                   <p style={styles.cardDesc}>
